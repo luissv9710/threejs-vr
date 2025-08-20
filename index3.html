@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Bosque nocturno VR / 1ª persona</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="style3.css" />
+
+    <!-- Importmap: Three.js y Addons ESModules -->
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.1/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.1/examples/jsm/"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div id="overlay">
+      <h1>Bosque nocturno</h1>
+      <p>Click para capturar el mouse y moverte con <b>W A S D</b>. Barra espaciadora: saltar. <br/>
+      En Quest 3, pulsa el botón de <b>Enter VR</b> y usa el joystick izquierdo para moverte.</p>
+      <button id="start">Entrar</button>
+    </div>
+
+    <!-- Audio ambiente (se engancha al AudioListener en main.js) -->
+    <audio id="ambient" src="assets/audio/forest_night.mp3" preload="auto" loop></audio>
+
+    <canvas id="scene"></canvas>
+    <script type="module" src="main3.js"></script>
+  </body>
+</html>
